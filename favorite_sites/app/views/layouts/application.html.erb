@@ -2,14 +2,58 @@
 <html>
 <head>
   <title>FavoriteSites</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <!--<%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>-->
+  <link rel="stylesheet" href="http://bootswatch.com/cyborg/bootstrap.css">
+  <link rel="stylesheet" href="http://bootswatch.com/assets/css/bootswatch.min.css">
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
-<%= yield %>
+<script src="http://bootswatch.com/assets/js/bsa.js"></script>
+ <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="../" class="navbar-brand">FavoriteSites</a>
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse navbar-inverse-collapse" id="navbar-main">
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes">Themes <span class="caret"></span></a>
+              <ul class="dropdown-menu" aria-labelledby="themes">
+                <li><a tabindex="-1" href="../default/">Default</a></li>
+                <li class="divider"></li>
+                <li><a tabindex="-1" href="../amelia/">Amelia</a></li>
+                <li><a tabindex="-1" href="../cerulean/">Cerulean</a></li>
+                <li><a tabindex="-1" href="../cosmo/">Cosmo</a></li>
+                <li><a tabindex="-1" href="../cyborg/">Cyborg</a></li>
+                <li><a tabindex="-1" href="../flatly/">Flatly</a></li>
+                <li><a tabindex="-1" href="../journal/">Journal</a></li>
+                <li><a tabindex="-1" href="../readable/">Readable</a></li>
+                <li><a tabindex="-1" href="../simplex/">Simplex</a></li>
+                <li><a tabindex="-1" href="../slate/">Slate</a></li>
+                <li><a tabindex="-1" href="../spacelab/">Spacelab</a></li>
+                <li><a tabindex="-1" href="../united/">United</a></li>
+                <li><a tabindex="-1" href="../yeti/">Yeti</a></li>
+              </ul>
+            </li>
+            <form class="navbar-form navbar-left">
+              <input type="text" class="form-control col-lg-8" placeholder="Search">
+            </form>
+         </div>
+      </div><!-- navbar-head -->
+ </div>
+
+<div class="container">
+
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+  <%= yield %>
+</div>
 
 </body>
 </html>
